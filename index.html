@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lemon Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -19,237 +20,836 @@
     }
   </script>
 
-  <style>
-    body {
-      background-color:  ;
-    }
-</style>
+
 </head>
 <body>
     <nav class="w-full shadow-md">
-    <div class="bg-primaryColor">
-        <p class="text-thirdColor text-[15px] text-center px-6 py-3">
-            Use this banner to inform your users of something important
-        </p>
-    </div>
-    <div class="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-3 text-gray-900 border-white/80 backdrop-saturate-200 border">
-        <div class="flex items-center">
-            <a href="#">
-                <img class="h-[50px] w-[50px] object-cover" src="Images/green logo.png" alt="Logo">
-            </a>
-            
-            <!-- Toggle button for small screens -->
-            <button id="menu-button" class="lg:hidden text-gray-900 focus:outline-none">
-                <!-- Icon for the menu button (hamburger icon) -->
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-            
-            <!-- Navigation Menu -->
-            <div id="menu" class="hidden lg:flex lg:items-center lg:gap-6">
-                <ul class="flex flex-col gap-2 my-2 lg:flex-row lg:mb-0 lg:mt-0 lg:gap-6">
-                    <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-                        <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-                            Overview
-                        </a>
-                    </li>
-                    <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-                        <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-                            Pages
-                        </a>
-                    </li>
-                    <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-                        <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-                            Services
-                        </a>
-                    </li>
-                    <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-                        <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
+        <div class="bg-primaryColor">
+            <p class="text-thirdColor text-[15px] text-center px-6 py-3">
+                Use this banner to inform your users of something important
+            </p>
+        </div>
+        <div class="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-3 text-gray-900 border-white/80 backdrop-saturate-200 border">
+            <div class="flex items-center">
+                <a href="#">
+                    <img class="h-[50px] w-[50px] object-cover" src="Images/green logo.png" alt="Logo">
+                </a>
+                
+                <!-- Toggle button for small screens -->
+                <button id="menu-button" class="lg:hidden text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <div id="menu" class="hidden lg:flex lg:items-center lg:gap-6">
+                    <ul class="flex flex-col gap-2 my-2 lg:flex-row lg:mb-0 lg:mt-0 lg:gap-6">
+                        <li class="block p-1 font-sans text-base antialiased font-medium leading-normal text-blue-gray-900">
+                            <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="block p-1 font-sans text-base antialiased font-medium leading-normal text-blue-gray-900">
+                            <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                                Pages
+                            </a>
+                        </li>
+                        <li class="block p-1 font-sans text-base antialiased font-medium leading-normal text-blue-gray-900">
+                            <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                                Services
+                            </a>
+                        </li>
+                        <li class="block p-1 font-sans text-base antialiased font-medium leading-normal text-blue-gray-900">
+                            <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            
+            <button
+                class="hidden select-none rounded-md border bg-transparent from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-sm shadow-lg font-bold text-gray-900 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                type="button">
+                <span>Purchase Now</span>
+            </button>
+        </div>
+    </nav> 
+    
+    <header>
+        <div class="mx-auto flex flex-col gap-[50px] max-w-screen-md py-12 lg:flex-row lg:justify-between">
+            <div class="mx-auto flex flex-col gap-[15px] text-center lg:text-left lg:mx-0 lg:w-1/2">
+                <p class="text-xs block font-sans antialiased font-semibold leading-relaxed text-gray-600">
+                    MEET LEMON
+                </p>
+                <h2 class="block font-sans text-5xl font-bold leading-[1.3] tracking-normal text-gray-900 antialiased lg:w-[300px]">
+                    Build a better site for your business.
+                </h2>
+                <p class="block font-sans text-[15px] antialiased font-semibold leading-relaxed text-gray-600 lg:w-[300px]">
+                    [short description here] Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, mollitia?
+                </p>
+                <div class="flex flex-row justify-center lg:justify-start items-center gap-[10px]">
+                    <button class="select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-[15px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        <span>Buy Lemon</span>
+                    </button>
+                    <button class="select-none rounded-sm bg-transparent border border-gray-400 py-2 px-3 text-center align-middle font-sans text-[10px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        <span>
+                            <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                            </svg>                          
+                        </span>
+                    </button>
+                    <button class="select-none rounded-sm bg-transparent from-gray-900 to-gray-800 py-2 px-2 text-center align-middle font-sans text-[15px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        <p>or view in Designer</p>
+                    </button>
+                </div>
+                <div class="flex justify-center lg:justify-start gap-[5px]">
+                    <div class="bg-secondaryColor p-1">
+                        <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                        </svg>
+                    </div>
+                    <p class="block font-sans font-semibold leading-[1.3] tracking-normal text-[13px] text-gray-400 antialiased">
+                        Rated 4.9/5 from over 600 reviews
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto relative right-[50px] p-5 flex flex-col text-center gap-[10px] bg-secondaryColor h-[350px] w-[240px] lg:w-[280px] lg:h-[420px]">
+                <div class="flex flex-row justify-between items-center">
+                    <p class="text-primaryColor font-semibold">
+                        Visitors
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" style="fill: #617161">
+                        <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                    </svg>  
+                </div>
+            
+                <div class="absolute top-[60px] bg-thirdColor p-2 pr- lg:pr-3 flex gap-[15px] lg:top-[70px]">
+                    <div class="bg-secondaryColor p-2">
+                        <img class="h-[30px] w-[30px] lg:h-[35px] lg:w-[35px] object-cover grayscale" src="Images/corporate man pic.png">             
+                    </div>
+                    <div class="flex flex-col gap-[5px] justify-center lg:gap-[7px]">
+                        <div class="w-[120px] h-[8px] lg:w-[150px] lg:h-[12px] bg-gray-200"></div>
+                        <div class="w-[80px] h-[8px] lg:w-[120px] lg:h-[12px] bg-gray-200"></div>
+                    </div>
+                </div>
+
+                <div class="absolute top-[130px] lg:right-[90px] lg:top-[155px] lg:left-[-40px] bg-thirdColor p-2 lg:pr-3 flex gap-[15px]">
+                    <div class="bg-secondaryColor p-2">
+                        <img class="h-[30px] w-[30px] lg:h-[35px] lg:w-[35px] object-cover grayscale" src="Images/corporate man pic.png">             
+                    </div>
+                    <div class="flex flex-col justify-center gap-[7px]">
+                       <div class="w-[120px] h-[8px] lg:w-[150px] lg:h-[12px] bg-gray-200"></div>
+                        <div class="w-[80px] h-[8px] lg:w-[120px] lg:h-[12px] bg-gray-200"></div>
+                    </div>
+                </div>
+
+                <div class="absolute top-[200px] lg:top-[240px] bg-thirdColor p-2 lg:pr-3 flex gap-[15px]">
+                    <div class="bg-secondaryColor p-2">
+                        <img class="h-[30px] w-[30px] lg:h-[35px] lg:w-[35px] object-cover grayscale" src="Images/corporate man pic.png">             
+                    </div>
+                    <div class="flex flex-col justify-center gap-[7px]">
+                       <div class="w-[120px] h-[8px] lg:w-[150px] lg:h-[12px] bg-gray-200"></div>
+                        <div class="w-[80px] h-[8px] lg:w-[120px] lg:h-[12px] bg-gray-200"></div>
+                    </div>
+                </div>
+                <div class="absolute top-[270px] lg:top-[325px] bg-thirdColor p-2 lg:pr-3 flex gap-[15px] responsive-item">
+                    <div class="bg-secondaryColor p-2">
+                        <img class="h-[30px] w-[30px] lg:h-[35px] lg:w-[35px] object-cover grayscale" src="Images/corporate man pic.png">             
+                    </div>
+                    <div class="flex flex-col justify-center gap-[7px]">
+                       <div class="w-[120px] h-[8px] lg:w-[150px] lg:h-[12px] bg-gray-200"></div>
+                        <div class="w-[80px] h-[8px] lg:w-[120px] lg:h-[12px] bg-gray-200"></div>
+                    </div>
+                </div> 
+                
+                <div class="absolute top-[210px] left-[120px]  p-4 lg:top-[250px] lg:left-[150px] bg-primaryColor h-[180px] w-[170px] lg:p-5 lg:w-[220px] lg:h-[240px] ">
+                    <div class="flex flex-row text-thirdColor mb-[15px] font-semibold items-center justify-between">
+                        <p class="text-[12px] lg:text-[15px]">Statistic</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" style="fill: #FAF9F6 ">
+                            <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                        </svg>
+                    </div>
+                    <div class="mx-auto w-[140px] mb-[12px] lg:w-[180px] h-[0.1px] bg-[#a1a1a1] lg:mb-[15px]"></div>
+                        
+                    <div class="flex gap-[8px] mb-[8px] lg:mb-[12px] ">
+                        <div class="bg-transparent border border-[#a1a1a1] h-[26px] w-[26px] lg:h-[36px] lg:w-[36px] rounded">
+                            <svg class="mx-auto w-3 h-3 my-[6px] lg:w-5 lg:h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="#ebfa9d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z"/>
+                            </svg>   
+                        </div>
+                        <div class="text-thirdColor  ">
+                            <p class="text-left font-semibold text-xs lg:text-[14px] block font-sans leading-1.3 tracking-normal antialiased">
+                                64%
+                            </p>
+                            <p class="text-[9px] lg:text-[11px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">
+                                Template Marketing
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="flex gap-[8px] mb-[8px] lg:mb-[12px] ">
+                        <div class="bg-transparent border border-[#a1a1a1] h-[26px] w-[26px] lg:h-[36px] lg:w-[36px] rounded">
+                            <svg class="mx-auto my-[6px] w-3 h-3 lg:w-5 lg:h-5  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ebfa9d" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="text-thirdColor  ">
+                            <p class="text-left font-semibold text-xs lg:text-[14px] block font-sans leading-1.3 tracking-normal antialiased">
+                                25%
+                            </p>
+                            <p class="text-[9px] lg:text-[11px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">
+                               SMS Marketing
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="flex gap-[8px]  ">
+                        <div class="bg-transparent border border-[#a1a1a1] h-[26px] w-[26px] lg:h-[36px] lg:w-[36px] rounded">
+                            <svg class="mx-auto my-[6px] w-3 h-3 lg:w-5 lg:h-5  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ebfa9d" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+            
+                        <div class="text-thirdColor  ">
+                            <p class="text-left font-semibold text-xs lg:text-[14px] block font-sans leading-1.3 tracking-normal antialiased">
+                                38%
+                            </p>
+                            <p class="text-[9px] lg:text-[11px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">
+                                Text Marketing
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </header>
+    
+    
+
+<section class="mt-[80px] mb-[80px] mx-auto ">
+    <div class="mx-auto flex border border-gray-200 w-[870px] h-[60px] ">
+        <div class="w-[60px] border-r border-gray-200 ">
+            <svg class="w-[25px] h-[25px] mx-[17px] my-[16px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ebfa9d" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+        <div class="w-[230px] border-r border-gray-200 p-2 pl-4 ">
+            <p class="text-[13px] block font-sans font-semibold w-[140px] leading-1.3 tracking-normal text-gray-500 antialiased">
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+        </div>
+
+        <div class="w-[60px] border-r border-gray-200 ">
+            <svg class="w-[25px] h-[25px] mx-[17px] my-[16px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#BA68C8" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+        <div class="w-[230px] border-r border-gray-200 p-2 pl-4 ">
+            <p class="text-[13px] block font-sans font-semibold w-[140px] leading-1.3 tracking-normal text-gray-500 antialiased">
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+        </div>
+
+        <div class="w-[60px] border-r border-gray-200 ">
+            <svg class="w-[25px] h-[25px] mx-[17px] my-[16px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#617161" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+        <div class="w-[230px] p-2 pl-4 ">
+            <p class="text-[13px] block font-sans font-semibold w-[140px] leading-1.3 tracking-normal text-gray-500 antialiased">
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
         </div>
         
-        <button
-            class="hidden select-none rounded-md border bg-transparent from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold text-gray-900 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-            type="button">
-            <span>Purchase Now</span>
-        </button>
     </div>
-</nav> 
 
+</section>
 
+<section class="mt-[80px] mb-[80px] ">
+    <div class="mx-auto flex flex-col max-w-screen-md py-12 lg:flex-row lg:justify-between">
+        <div class="mx-auto flex flex-col text-center lg:text-left lg:mx-0 lg:w-1/2">
+            <p class="text-[12px] block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-600">
+                CONTENT SECTION
+            </p>
+            <h2 class="block mb-4 font-sans text-4xl font-bold leading-1.3 tracking-normal  text-gray-900 antialiased lg:w-[350px]">
+                Introduce a feature with this section.
+            </h2>
+            <p class="block font-sans mb-5 text-[14px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 lg:w-[300px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos animi inventore eius placeat optio ex quam! Reprehenderit.
+            </p>
+            <button class="flex gap-[10px] py-2 px-4 w-[123px] mb-5 justify-center lg:justify-start items-center select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p>Get Started</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                </svg>                      
+            </button>
+           
+            <p class="mb-3 text-[13px] block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-600">
+                Add an additional detail here
+            </p>
+            <div class="flex gap-[10px] ">
+                <div class="bg-secondaryColor h-[40px] w-[40px] px-1 pt-1 rounded-[100%]">
+                    <img class="h-[30px] w-[30px] object-cover grayscale" src="Images/corporate man pic.png">
+                </div>
+                <div>
+                    <p class="text-[13px] block font-sans antialiased font-bold tracking-normal text-gray-700">
+                        John Smith
+                    </p>
+                    <p class="text-[12px] block font-sans antialiased tracking-normal text-gray-500">
+                        Founder @ Lemon
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" relative bg-gray-100 h-[340px] w-[300px]  ">
+           <img class="absolute w-[300px] h-[340px] object-cover " src="Images/corporate woman 3.png">
 
-<header>
-    <div class="mx-auto flex flex-col gap-[50px] max-w-screen-md py-12 lg:flex-row lg:justify-between">
-        <div class="mx-auto flex flex-col gap-[15px] text-center lg:text-left lg:mx-0 lg:w-1/2">
-            <p class="text-xs block font-sans antialiased font-semibold leading-relaxed text-gray-600">
+           <div class=" absolute bottom-[80px] left-[-80px] w-[160px] h-[140px] shadow bg-thirdColor p-3">
+                <p class="text-[14px] leading-tight font-bold mb-[12px]  ">Payment Plan</p>
+                <div class=" rounded-[2px] w-[120px] h-[10px] bg-gray-200 mb-[8px]"></div>
+                <div class=" rounded-[2px] w-[60px] h-[10px] bg-gray-200 mb-[12px]"></div>
+                
+                <div class="bg-secondaryColor rounded-[2px] w-full  p-0.5 ">
+                    <div class="flex items-center p-[7px] space-x-2 ">
+
+                        <div class="bg-thirdColor rounded p-[5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" style="fill:#617161;">
+                                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 14.915V18h-2v-1.08c-2.339-.367-3-2.002-3-2.92h2c.011.143.159 1 2 1 1.38 0 2-.585 2-1 0-.324 0-1-2-1-3.48 0-4-1.88-4-3 0-1.288 1.029-2.584 3-2.915V6.012h2v1.109c1.734.41 2.4 1.853 2.4 2.879h-1l-1 .018C13.386 9.638 13.185 9 12 9c-1.299 0-2 .516-2 1 0 .374 0 1 2 1 3.48 0 4 1.88 4 3 0 1.288-1.029 2.584-3 2.915z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class=" rounded-[2px] w-[70px] h-2 bg-primaryColor mb-[4px]"></div>
+                            <div class=" rounded-[2px] w-[40px] h-2 bg-primaryColor mb-[4px]"></div>
+                        </div>
+
+                    </div>
+                </div>   
+            </div>
+
+        </div>
+
+</section>
+
+<section class="mx-auto my-[80px]">
+    <div class=" mx-auto flex justify-center gap-[1px] ">
+        <div class="flex flex-col bg-primaryColor w-[300px] h-[300px] p-4 items-center justify-center gap-[15px] text-thirdColor ">
+            <div class="bg-[#bfbfbe] p-3 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #617161;">
+                    <path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm0 2 .001 4H5V5h14zM5 11h8v8H5v-8zm10 8v-8h4.001l.001 8H15z"></path>
+                </svg>
+            </div>
+            <p class="block font-sans antialiased font-semibold tracking-normal leading-1.3 text-center ">Layouts</p>
+            <p class="block font-sans text-[12px] font-thin antialiased tracking-normal leading-1.3 text-center w-[180px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, molestiae nobis!</p>
+            <button class="flex gap-[5px] py-1.5 px-3 justify-center lg:justify-start items-center select-none rounded-sm bg-[#0b0d12] from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px]  text-thirdColor transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p class="text-center">Learn More</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke=" #FAF9F6 " stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+                  </svg>                
+            </button>
+        </div>
+
+        <div class=" flex flex-col bg-primaryColor w-[300px] h-[300px] p-4 items-center justify-center gap-[15px] text-thirdColor ">
+            <div class="bg-[#e3cdfa] p-3 ">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z" clip-rule="evenodd"/>
+                  </svg>                  
+            </div>
+            <p class="block font-sans antialiased font-semibold tracking-normal leading-1.3 text-center ">Sections</p>
+            <p class="block font-sans text-[12px] font-thin antialiased tracking-normal leading-1.3 text-center w-[180px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, molestiae nobis!</p>
+            <button class="flex gap-[5px] py-1.5 px-3 justify-center lg:justify-start items-center select-none rounded-sm bg-[#0b0d12] from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px]  text-thirdColor transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p class="text-center">Learn More</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke=" #FAF9F6 " stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+                  </svg>                
+            </button>
+        </div>
+        
+        <div class="flex flex-col bg-primaryColor w-[300px] h-[300px] p-4 items-center justify-center gap-[15px] text-thirdColor ">
+            <div class="bg-[#fce8b9] p-3 ">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M14 4.182A4.136 4.136 0 0 1 16.9 3c1.087 0 2.13.425 2.899 1.182A4.01 4.01 0 0 1 21 7.037c0 1.068-.43 2.092-1.194 2.849L18.5 11.214l-5.8-5.71 1.287-1.31.012-.012Zm-2.717 2.763L6.186 12.13l2.175 2.141 5.063-5.218-2.141-2.108Zm-6.25 6.886-1.98 5.849a.992.992 0 0 0 .245 1.026 1.03 1.03 0 0 0 1.043.242L10.282 19l-5.25-5.168Zm6.954 4.01 5.096-5.186-2.218-2.183-5.063 5.218 2.185 2.15Z" clip-rule="evenodd"/>
+                </svg>                  
+            </div>
+            <p class="block font-sans antialiased font-semibold tracking-normal leading-1.3 text-center ">Components</p>
+            <p class="block font-sans text-[12px] font-thin antialiased tracking-normal leading-1.3 text-center w-[180px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, molestiae nobis!</p>
+            <button class="flex gap-[10px] py-1.5 px-3 justify-center lg:justify-start items-center select-none rounded-sm bg-[#0b0d12] from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px]  text-thirdColor transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p class="text-center">Learn More</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke=" #FAF9F6 " stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+                  </svg>                
+            </button>
+        </div>
+    </div>
+
+</section>
+
+<section class="mt-[80px] mb-[80px]  mx-auto">
+    <div class="mx-auto flex flex-col max-w-screen-md py-12 lg:flex-row lg:justify-between">
+        <div class=" absolute bg-gray-100 h-[400px] w-[320px]  "></div>
+            <img class="relative right-[-3px] bottom-[20px] w-[400px] h-[400px] object-cover  items-center " src="Images/corporate man5.png">
+ 
+            <div class=" relative top-[250px] right-[200px]  w-[280px] h-[100px] shadow bg-thirdColor p-3 ">
+                 <p class="text-[14px] leading-tight font-bold mb-[12px]  ">User Control</p>
+                 <div class=" rounded-[2px] w-[120px] h-[1px] bg-gray-200 mb-[8px]"></div>
+                 <div class="flex items-center ">
+                    <div class="bg-secondaryColor rounded-full p-[6px] mr-[8px]">
+                        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
+                          </svg>    
+                    </div>
+                    <div>
+                        <div class=" rounded-[2px] w-[60px] h-[6px] bg-gray-200 mb-[6px] mt-[10px]"></div>
+                        <div class=" rounded-[2px] w-[30px] h-[6px] bg-gray-200 mb-[12px]"></div>
+                    </div>
+                    <div class="bg-[#f5b2ce] rounded-full p-[8px] ml-[10px]">
+                        <svg class="w-[13px] h-[13px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z" clip-rule="evenodd"/>
+                        </svg>
+                             
+                    </div>
+                </div>   
+             </div>
+ 
+        <div class="mx-auto text-center relative right-[100px] flex flex-col lg:text-left  ">
+            <p class="text-[11px] font-bold block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-600">
+                GET STARTED
+            </p>
+            <h2 class="block mb-4 font-sans text-4xl font-bold leading-1.3 tracking-normal  text-gray-900 antialiased lg:w-[350px]">
+                Start your Lemon journey here.
+            </h2>
+            <p class="block font-sans mb-5 text-[14px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 lg:w-[300px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos animi inventore eius placeat optio ex quam! Reprehenderit.
+            </p>
+
+            <input class="border border-gray-100 text-[14px] p-2 pl-3 w-[300px] shadow mb-5" type="text " placeholder="Your Name">
+            <input class="border border-gray-100 text-[14px] p-2 pl-3 w-[300px] shadow mb-5" type="text" placeholder="Company Email">
+            <button class="flex gap-[10px] py-2 px-5 text-center w-[300px] mb-3 justify-center items-center select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p>Get Started</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                  </svg>                         
+            </button>
+           
+            <p class="mb-3 text-[13px] block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-400">
+                14-day trial - No credit card required
+            </p>
+            
+        </div>
+</section>
+
+<section class="mx-auto  my-[80px] ">
+    <div class="bg-gray-100 w-[900px] mx-auto  p-10">
+        <p class="block  font-sans text-[12px] text-center font-bold leading-1.3 tracking-normal  text-gray-500 antialiased">
+            CUSTOMER REVIEW
+        </p>
+        <p class="block mb-8 w-[300px] text-center mx-auto font-sans text-[30px] font-bold leading-tight tracking-normal  text-gray-900 antialiased">
+            Customers love the ease and simplicity
+        </p>
+        
+        <div class="flex items-center gap-[25px] ">
+            <div class="bg-thirdColor w-[270px] p-5">
+                <div class="flex items-center gap-[6px] mb-4 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                </div>
+                <p class="block mb-4 font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consectetur quisquam esse architecto.
+                </p>
+
+                <p class="block font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Rated 5/5
+                </p>
+                <p class="block font-sans text-[12px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    from over 40 reviews
+                </p>
+            </div>
+
+            <div class="bg-thirdColor w-[270px] p-5">
+                <div class="flex items-center gap-[6px] mb-4 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                </div>
+                <p class="block mb-4 font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consectetur quisquam esse architecto.
+                </p>
+
+                <p class="block font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Rated 5/5
+                </p>
+                <p class="block font-sans text-[12px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    from over 40 reviews
+                </p>
+            </div>
+
+            <div class="bg-thirdColor w-[270px] p-5">
+                <div class="flex items-center gap-[6px] mb-4 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #c7f34f;">
+                        <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path>
+                    </svg>
+                </div>
+                <p class="block mb-4 font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consectetur quisquam esse architecto.
+                </p>
+
+                <p class="block font-sans font-semibold text-[13px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Rated 5/5
+                </p>
+                <p class="block font-sans text-[12px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    from over 40 reviews
+                </p>
+            </div>
+        </div>
+  
+    </div>
+
+</section>
+
+<section class="mt-[80px] mb-[80px]  mx-auto">
+    <div class="mx-auto flex flex-col max-w-screen-md py-12 lg:flex-row lg:justify-between">
+        <div class="text-center relative flex flex-col lg:text-left  ">
+            <p class="text-[11px] mb-2 font-bold block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-600">
+                CONTENT SECTION
+            </p>
+            <h2 class="block mb-4 font-sans text-4xl font-bold leading-1.3 tracking-normal  text-gray-900 antialiased lg:w-[350px]">
+                Build beautiful sites without the stress.
+            </h2>
+            <p class="block font-sans mb-5 text-[13px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 lg:w-[300px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos animi inventore eius placeat optio ex quam! Reprehenderit.
+            </p>
+
+            <div class="flex items-center justify-center w-[300px] border border-gray-200 p-4 mb-4">
+                <p class="flex text-center mr-3 block font-sans text-[25px] antialiased font-bold tracking-normal leading-1.3 text-black w-[100px]">
+                    100 <span class="text-secondaryColor font-bold ">+</span>
+                </p>
+                <p class="block font-sans text-[11px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 w-[100px]">
+                    Successful Projects
+                </p> 
+                <div class="h-[40px] w-0.5 bg-gray-200 mx-[10px]"></div>
+                <p class="flex text-center block font-sans text-[25px] antialiased font-bold tracking-normal leading-1.3 text-black w-[100px]">
+                    39 <span class="text-secondaryColor font-bold">+</span>
+                </p>
+                <p class="block font-sans text-[11px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 w-[100px]">
+                    Successful Projects
+                </p> 
+            </div>
+            <button class="flex gap-[10px] py-2 px-5 text-center w-[300px] mb-3 justify-center items-center select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p>Get Started</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                  </svg>                    
+            </button>
+        </div>
+
+        <div class=" absolute right-[250px] bg-gray-100 h-[400px] w-[320px]  "></div>
+            <img class="relative right-[-150px] bottom-[20px] w-[400px] h-[400px] object-cover  items-center " src="Images/corporate man5.png">
+ 
+            <div class=" relative top-[150px] right-[320px] shadow p-4 h-[180px] bg-thirdColor">
+                <div class="flex items-center justify-between mb-[15px] w-[150px]   gap-[7px]">
+                    <p class="text-[14px] leading-tight font-bold   ">Balance</p>
+                    <p class="bg-primaryColor text-secondaryColor p-0.5 px-2 block font-sans text-[12px] antialiased tracking-normal leading-1.3  ">
+                        Available
+                    </p>
+                </div>
+                 
+                 <div class=" rounded-[2px] w-full h-0.5 bg-gray-200 my-3"></div>
+                 <p class="text-black text-left mb-3 font-bold block font-sans text-[16px] antialiased tracking-normal leading-1.3">
+                    $60,124.00
+                 </p>
+                 <div class=" rounded-[2px] w-full h-2 bg-gray-200 mb-4"></div>
+                 <div class="flex items-center bg-secondaryColor p-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="fill: #617161;">
+                        <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z"></path>
+                    </svg>
+                    <p class="ml-[5px] mr-[25px] text-primaryColor block font-sans font-semibold text-[12px] antialiased tracking-normal leading-1.3">
+                        Lemon
+                    </p>
+                    <div class=" rounded-[2px] w-[50px]  h-2 bg-primaryColor"></div>
+                </div>   
+             </div>
+     </div>
+
+</section>
+
+<section class="mx-auto  my-[80px] ">
+    <div class="bg-secondaryColor w-[950px] mx-auto  p-10">
+        <p class="block  font-sans text-[12px] text-center font-bold leading-1.3 tracking-normal  text-gray-700 antialiased">
+            BUSINESS BLOG TIPS AND TICKS
+        </p>
+        <p class="block mb-8 text-center mx-auto font-sans text-[27px] font-bold leading-tight tracking-normal  text-gray-900 antialiased">
+            Our recent news & insights
+        </p>
+        
+        <div class="flex items-center justify-center gap-[20px] ">
+            <div class="bg-thirdColor w-[250px]">
+                <img class="object-cover" src="https://t3.ftcdn.net/jpg/05/36/58/50/360_F_536585092_mjhZcnvYeOl8YbtdDrAcNhgIvkGgscpN.jpg">
+
+                <p class="block uppercase mt-3 font-sans font-bold px-[16px] text-[10px] leading-tight tracking-normal text-gray-500 antialiased">
+                    8 min to read
+                </p>
+
+                <p class="block px-[16px] pt-1 pb-3 font-sans font-bold text-[16px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                   Everything You Need To Know About Webflow.
+                </p>
+                <div class="px-[16px] pb-3 flex gap-2 ">
+                    <div class="bg-[#f7c0d7] p-1 rounded-[100%]">
+                        <img class="grayscale w-[20px] h-[20px] object-cover" src="Images/corporate man pic.png">
+                    </div>
+                    <p class="block font-sans font-bold text-[11px] mt-1 leading-1.3 tracking-normal text-gray-900 antialiased">
+                        G. Grasante
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-thirdColor w-[250px]">
+                <img class="object-cover" src="https://media.istockphoto.com/id/944060494/photo/building-up-on-their-ideas.webp?b=1&s=170667a&w=0&k=20&c=9HdLW5AARGzFx0WHEQsJmnruGj4aihWX2tvb6VV5rzc=">
+
+                <p class="block uppercase mt-3 font-sans font-bold px-[16px] text-[10px] leading-tight tracking-normal text-gray-500 antialiased">
+                    12 min to read
+                </p>
+
+                <p class="block px-[16px] pt-1 pb-3 font-sans font-bold text-[16px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                Seven Signs You Are In Love With Webflow.
+                </p>
+                <div class="px-[16px] pb-3 flex gap-2 ">
+                    <div class="bg-[#f7c0d7] p-1 rounded-[100%]">
+                        <img class="grayscale w-[20px] h-[20px] object-cover" src="Images/corporate man pic.png">
+                    </div>
+                    <p class="block font-sans font-bold text-[11px] mt-1 leading-1.3 tracking-normal text-gray-900 antialiased">
+                        G. Grasante
+                    </p>
+                </div>
+            </div>
+
+                <div class="bg-thirdColor w-[250px]">
+                    <img class="object-cover" src="https://images.pexels.com/photos/7793693/pexels-photo-7793693.jpeg">
+
+                    <p class="block uppercase mt-3 font-sans font-bold px-[16px] text-[10px] leading-tight tracking-normal text-gray-500 antialiased">
+                        10 min to read
+                    </p>
+
+                    <p class="block px-[16px] pt-1 pb-3 font-sans font-bold text-[16px] leading-1.3 tracking-normal text-gray-900 antialiased">
+                    Learn How To Make More Money With Webflow.
+                    </p>
+                    <div class="px-[16px] pb-3 flex gap-2 ">
+                        <div class="bg-[#f7c0d7] p-1 rounded-[100%]">
+                            <img class="grayscale w-[20px] h-[20px] object-cover" src="Images/corporate man pic.png">
+                        </div>
+                        <p class="block font-sans font-bold text-[11px] mt-1 leading-1.3 tracking-normal text-gray-900 antialiased">
+                            G. Grasante
+                        </p>
+                    </div>
+                </div>
+           
+
+            
+        </div>
+  
+    </div>
+
+</section>
+
+<section class="mt-[80px] mb-[80px]  mx-auto">
+    <div class="mx-auto flex flex-col max-w-screen-md lg:flex-row lg:justify-between">
+        <div class="text-center flex flex-col lg:text-left  ">
+            <p class="text-[12px] mb-2 font-bold block font-sans antialiased font-semibold leading-relaxed tracking-normal text-gray-600">
                 MEET LEMON
             </p>
-            <h2 class="block font-sans text-4xl font-bold leading-[1.3] tracking-normal text-gray-900 antialiased lg:w-[300px]">
-                Build a better site for your business.
+            <h2 class="block mb-4 font-sans text-4xl font-bold leading-1.3 tracking-normal  text-gray-900 antialiased lg:w-[350px]">
+                Build beautiful sites without the stress.
             </h2>
-            <p class="block font-sans text-[12px] antialiased font-semibold leading-relaxed text-gray-600 lg:w-[300px]">
-                [short description here] Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, mollitia?
+            <p class="block font-sans mb-5 text-[13px] antialiased font-semibold tracking-normal leading-1.3 text-gray-600 lg:w-[300px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos animi inventore eius placeat optio ex quam! Reprehenderit.
             </p>
-            <div class="flex flex-row justify-center lg:justify-start items-center gap-[10px]">
-                <button class="select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-[10px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    <span>Buy Lemon</span>
-                </button>
-                <button class="select-none rounded-sm bg-transparent border border-gray-400 py-2 px-3 text-center align-middle font-sans text-[10px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    <span>
-                        <svg class="w-3 h-3 text-gray-600 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
-                        </svg>
-                    </span>
-                </button>
-                <button class="select-none rounded-sm bg-transparent from-gray-900 to-gray-800 py-2 px-2 text-center align-middle font-sans text-[10px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    <p>or view in Designer</p>
-                </button>
-            </div>
-            <div class="flex justify-center lg:justify-start gap-[5px]">
-                <div class="bg-secondaryColor p-1">
-                    <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
-                    </svg>
+            <button class="flex gap-[10px] py-2 px-5 text-center w-[140px] mb-3 justify-center items-center select-none rounded-sm bg-secondaryColor from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px] font-bold text-gray-700 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p>Get Started</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                  </svg>                    
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-[40px] mt-[8px]"> 
+            <div class="flex gap-[25px] items-center">
+                <div class="bg-[#f7c0d7] py-3 px-5">
+                    <p class="block font-sans text-[18px] antialiased font-semibold tracking-normal leading-1.3 text-gray-900">
+                        1
+                    </p>
                 </div>
-                <p class="block font-sans font-semibold leading-[1.3] tracking-normal text-[10px] text-gray-400 antialiased">
-                    Rated 4.9/5 from over 600 reviews
+                <p class="block font-sans text-[14px] antialiased font-medium tracking-normal leading-1.3 text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+
+            <div class="flex gap-[25px] items-center">
+                <div class="bg-[#b7effe] py-3 px-5">
+                    <p class="block font-sans text-[18px] antialiased font-semibold tracking-normal leading-1.3 text-gray-900">
+                        2
+                    </p>
+                </div>
+                <p class="block font-sans text-[14px] antialiased font-medium tracking-normal leading-1.3 text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+
+            <div class="flex gap-[25px] items-center">
+                <div class="bg-[#e9bbf1] py-3 px-5">
+                    <p class="block font-sans text-[18px] antialiased font-semibold tracking-normal leading-1.3 text-gray-900">
+                        3
+                    </p>
+                </div>
+                <p class="block font-sans text-[14px] antialiased font-medium tracking-normal leading-1.3 text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur.
                 </p>
             </div>
         </div>
-        <div class="mx-auto relative flex flex-col gap-[10px] bg-secondaryColor h-[280px] w-[200px] p-4 lg:w-[250px]">
-            <div class="flex flex-row justify-between items-center">
-                <p class="text-primaryColor font-semibold">
-                    Visitors
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" style="fill: #617161">
-                    <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-                </svg>  
-            </div>
+     </div>
 
-            <div class="absolute top-[50px] bg-thirdColor p-2 flex gap-[15px]">
-                <div class="bg-secondaryColor w-[30px] h-[30px]">
-                    <img class="h-[30px] w-[30px] object-cover grayscale" src="Images/corporate man pic.png">
-                </div>
-                <div class="flex flex-col gap-[5px]">
-                    <div class="w-[80px] h-[8px] bg-gray-200"></div>
-                    <div class="w-[60px] h-[8px] bg-gray-200"></div>
-                </div>
-            </div>
+</section>
 
-            <div class="absolute top-[105px] right-[90px] bg-thirdColor p-2 flex gap-[15px]">
-                <div class="bg-secondaryColor w-[30px] h-[30px]">
-                    <img class="h-[30px] w-[30px] object-cover grayscale" src="Images/corporate man3.png">
-                </div>
-                <div class="flex flex-col gap-[5px]">
-                    <div class="w-[80px] h-[8px] bg-gray-200"></div>
-                    <div class="w-[60px] h-[8px] bg-gray-200"></div>
-                </div>
-            </div>
+<section class="mt-[80px] mb-[80px]  mx-auto">
+    <div class="mx-auto bg-secondaryColor w-[850px] py-10 flex gap-[60px] items-center justify-center">
+        <h3 class="w-[300px] block font-sans font-bold text-[25px] mt-1 leading1.3 tracking-normal text-primaryColor antialiased">
+            Add your own details to this call to action and inform your viewers.
+        </h3>
 
-            <div class="absolute top-[160px] bg-thirdColor p-2 flex gap-[15px]">
-                <div class="bg-secondaryColor w-[30px] h-[30px]">
-                    <img class="h-[30px] w-[30px] object-cover grayscale" src="Images/corporate man pic.png">
-                </div>
-                <div class="flex flex-col gap-[5px]">
-                    <div class="w-[80px] h-[8px] bg-gray-200"></div>
-                    <div class="w-[60px] h-[8px] bg-gray-200"></div>
-                </div>
-            </div>
-
-            <div class="absolute top-[215px] bg-thirdColor p-2 flex gap-[15px]">
-                <div class="bg-secondaryColor w-[30px] h-[30px]">
-                    <img class="h-[30px] w-[30px] object-cover grayscale" src="Images/corporate man pic.png">
-                </div>
-                <div class="flex flex-col gap-[5px]">
-                    <div class="w-[80px] h-[8px] bg-gray-200"></div>
-                    <div class="w-[60px] h-[8px] bg-gray-200"></div>
-                </div>
-            </div>
-
-            <div class="absolute top-[180px] left-[100px] bg-primaryColor h-[160px] w-[160px] p-4">
-                <div class="flex flex-row text-thirdColor  mb-2 font-semibold items-center justify-between">
-                    <p class="text-[12px]">Statistic</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="fill: #FAF9F6 ">
-                        <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-                    </svg>
-                </div>
-                <div class="mx-auto w-[125px] h-[0.1px] bg-[#a1a1a1] mb-[10px]"></div>
-                    
-                <div class="flex gap-[8px] mb-[6px] ">
-                    <div class="bg-transparent mt-0.5 border border-[#a1a1a1] h-[26px] w-[26px] rounded">
-                        <svg class="mx-auto my-[6px] w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="#ebfa9d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z"/>
-                        </svg>   
-                    </div>
-
-                    <div class="text-thirdColor  ">
-                        <p class="font-semibold text-xs block font-sans leading-1.3 tracking-normal antialiased">
-                            64%
-                        </p>
-                        <p class="text-[9px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">Template Marketing</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-[8px] ">
-                    <div class="bg-transparent mt-0.5 border border-[#a1a1a1] h-[26px] w-[26px] rounded">
-                        <svg class="mx-auto my-[6px] w-3 h-3  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ebfa9d" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z" clip-rule="evenodd"/>
-                            <path fill-rule="evenodd" d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z" clip-rule="evenodd"/>
-                        </svg>
-
-                    </div>
-                    
-                    <div class="text-thirdColor  ">
-                        <p class="font-semibold text-xs block font-sans leading-1.3 tracking-normal antialiased">
-                            25%
-                        </p>
-                        <p class="text-[9px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">
-                           SMS Marketing
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex gap-[8px] mt-[6px] ">
-                    <div class="bg-transparent mt-0.5 border border-[#a1a1a1] h-[26px] w-[26px] rounded">
-                        <svg class="mx-auto my-[6px] w-3 h-3  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ebfa9d" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-
-                    <div class="text-thirdColor  ">
-                        <p class="font-semibold text-xs block font-sans leading-1.3 tracking-normal antialiased">
-                            38%
-                        </p>
-                        <p class="text-[9px] text-[#c4c4c4] block font-sans leading-1.3 tracking-normal antialiased">
-                            Text Marketing
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="flex flex-col gap-[15px] items-center mt-[20px]">
+            <input class="text-primaryColor placeholder-primaryColor bg-transparent border border-gray-400 p-1 px-5 text-[12px]" type="text" placeholder="Email address">
+            <button class="flex gap-[10px] py-2 px-5 text-center w-[188px] mb-3 justify-center items-center select-none rounded-sm bg-primaryColor from-gray-900 to-gray-800  text-center align-middle font-sans text-[12px] font-bold text-thirdColor transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <p>Get Started</p> 
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="#FAF9F6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                  </svg>                         
+            </button>
         </div>
     </div>
-</header>
 
+    
+</section>
+
+<footer class="mx-auto">
+    <div class="  mx-auto flex justify-between">
+        <div class=" mx-auto flex items-center gap-[10px] mb-[30px] ">
+            <img class="w-[50px] h-[50px]" src="Images/green logo.png">
+            <p class="block font-sans font-semibold text-[12px] mt-1 leading1.3 tracking-normal text-gray-900 antialiased">
+                Lemon Webflow Template
+            </p>
+        </div>
+        
+        <div class="flex gap-[15px] hidden lg:flex lg:items-center lg:gap-4 mx-auto" id="menu" >
+            <ul class="flex flex-col gap-2 my-2 lg:flex-row lg:mb-0 lg:mt-0 lg:gap-6">
+                <li class="block p-1 font-sans text-[12px] antialiased font-medium leading-normal text-blue-gray-900">
+                    <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                        Overview
+                    </a>
+                </li>
+                <li class="block p-1 font-sans text-[12px] antialiased font-medium leading-normal text-blue-gray-900">
+                    <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                        Home
+                    </a>
+                </li>
+                <li class="block p-1 font-sans text-[12px] antialiased font-medium leading-normal text-blue-gray-900">
+                    <a href="#" class="flex items-center transition-colors hover:text-blue-500">
+                        Template
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg-gray-200 h-0.5 w-[880px] mb-[30px] mx-auto "></div>
+    <div class="mx-auto flex justify-between">
+        <p class="mx-auto text-gray-800 text-[11px] font-medium">
+            &copy; Copyrights by Genius Grasante - 2024
+        </p>
+        <div class="mx-auto flex gap-[10px] mb-[20px]">
+            <div class="border border-black text-center p-1">
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                </svg> 
+            </div>
+
+            <div class="border border-black p-1">
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z" clip-rule="evenodd"/>
+                </svg>                  
+            </div>
+
+            <div class="border border-black p-1">
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                  </svg>                                 
+            </div>
+
+            <div class="border border-black p-1">
+                <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                  </svg>                               
+            </div>
+
+        </div>
+    </div>
+
+
+</footer>
 
 
 <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
-<!-- JavaScript to Toggle Menu on Small Screens -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuButton = document.getElementById('menu-button');
-        const menu = document.getElementById('menu');
 
-        menuButton.addEventListener('click', function () {
-            menu.classList.toggle('hidden');
-        });
-    });
-</script>
+<!-- Add this script at the end of your body -->
+<script>
+    document.getElementById("menu-button").onclick = function() {
+        const menu = document.getElementById("menu");
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+        } else {
+            menu.classList.add("hidden");
+        }
+    };
+    </script>
 
 </body>
 
