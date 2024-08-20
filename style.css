@@ -1,1 +1,26 @@
-
+@media (max-width: 768px) {
+    .responsive-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .responsive-item {
+      width: 100%; /* Each item takes full width on mobile */
+      border-right: none; /* Remove right border on individual items */
+      border-bottom: 1px solid #e2e8f0; /* Add bottom border to separate items */
+    }
+  
+    .responsive-item:last-child {
+      border-bottom: none; /* Remove the bottom border from the last item */
+    }
+  
+    .text-container p {
+      text-align: center; /* Center the text on smaller screens */
+    }
+  
+    .icon-container {
+      justify-content: center; /* Center the icon on smaller screens */
+      border-bottom: none; /* Remove the bottom border from icons */
+    }
+  }
+  
